@@ -30,7 +30,6 @@ Welcome <%=userLogin.getUserId() %>
 </div> --%>
 </div>
 <div id="main1">
-  <%--  <%@ include file="/JSP/adminmenu.jsp" %> --%>
   <div id="gallery">
   <br />
   <br />
