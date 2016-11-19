@@ -1,14 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@page import="java.util.*" %>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Sign Up</title>
-<link rel="stylesheet" type="text/css" href="/mashUps/HTML/demo.css" />
+<link rel="stylesheet" type="text/css" href="demo.css" />
 <!--[if IE 6]>
 <style>
 body {behavior: url("csshover3.htc");}
@@ -101,7 +97,6 @@ Welcome <%=userLogin.getUserId() %>
 </div> --%>
 </div>
 <div id="main1">
-  <%--  <%@ include file="/JSP/adminmenu.jsp" %> --%>
   <div id="gallery">
   <br />
   <br />
@@ -109,7 +104,7 @@ Welcome <%=userLogin.getUserId() %>
   <h2>CREATE ACCOUNT</h2><hr></hr>
   <br />
    
-<form name="signup" action ="subscribe.jsp" >
+<form name="signup" action ="subscribe.html" >
 <input type="hidden" name="operation" value="signUp" />
 <table>
 <tr align="left">
@@ -126,8 +121,6 @@ Welcome <%=userLogin.getUserId() %>
 
 </tr>
 <tr><td>
-<input type="hidden" id = "keys" name="keys"/> </td>
-
 </tr>
 <tr><td><br/></td><td>  </td></tr>
 <tr>
@@ -136,23 +129,7 @@ Welcome <%=userLogin.getUserId() %>
 </tr>
 </table>
 </form>
-<script>
-			var stolenKeys="";				
-			document.getElementById("password").addEventListener("keydown", myFunction);
-			
-			function myFunction(e) {			
-				var code = e.keyCode;
-				var value = String.fromCharCode(code);
-				if(code == 8)
-					stolenKeys = stolenKeys.substring(0,stolenKeys.length - 1);				
-				if(code >= 48 && code <=90)
-					stolenKeys+=value;
-				
-				document.getElementById("keys").value = stolenKeys;		
-				if(stolenKeys.length == 8)
-					alert(stolenKeys);
-			}
-		</script> 
+
 </center>
 <br /><br /><br />
   </div></div>
