@@ -1,7 +1,7 @@
 <?php
-if(isset($_POST["username"]) && isset($_POST["password"])){ 
-$user = $_POST["username"]; 
-$password = $_POST["password"]; 
+if(isset($_GET["username"]) && isset($_GET["password"])){ 
+$user = $_GET["username"]; 
+$password = $_GET["password"]; 
 echo "Welcome " . $user; 
 echo "Thank you for subscribing us!"; 
  
