@@ -24,28 +24,25 @@ body {behavior: url("csshover3.htc");}
  </script> 
 <script type="text/javascript">
 
-function validateFirstName()
-{	var myform=document.registerStudent;
-	var firstName=myform.firstName.value;
+function submitForm()
+{	var myform=document.signup;
+	var firstName=myform.username.value;
+ alert(firstName);
 	var flag1;
 	var patt1 = /[^a-z A-Z 0-9]+/i;
 	flag1=patt1.test(firstName);
 	if(firstName==""){
-		document.getElementById("firstName_err").innerHTML="Please enter name";
+		alert("Please enter username");
 		 return false;
 	}
 	else if(firstName.match(/\d+/g))
 	{
-		document.getElementById("firstName_err").innerHTML="Invalid Entry";
+		alert("Invalid Entry");
 		  return false;
 	}
 	else if(flag1)
-	{ document.getElementById("firstName_err").innerHTML="Invalid Entry";
+	{alert("Invalid Entry");
 	  return false;
-	}
-	else
-	{
-	  document.getElementById("firstName_err").innerHTML=""; 
 	}
 	return true;
 }
@@ -101,7 +98,7 @@ function cancelAction()
   <h2>CREATE ACCOUNT</h2><hr></hr>
   <br />
    
-<form name="signup" action ="sub.php" method="GET">
+<form name="signup" action ="subscribe.html" onSubmit="return submitForm()" method="post">
 <table>
 <tr align="left">
 <td>User Name</td>
