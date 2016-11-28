@@ -77,8 +77,9 @@ function validateLastName()
 
 function cancelAction()
 {	
-	window.location.href="/project1/JSP/login.jsp"; 
-	
+	 document.getElementById("username").value="";
+	 document.getElementById("password").value="";
+	 document.getElementById("email").value="";
 }
 </script>
 
@@ -102,15 +103,15 @@ function cancelAction()
 <table>
 <tr align="left">
 <td>User Name</td>
-<td><input type="text" name="username" maxlength="20"></input><span id="firstName_err" class="disp_err"></span></td>
+<td><input type="text" id="username" name="username" maxlength="20"></input><span id="firstName_err" class="disp_err"></span></td>
 </tr>
 <tr align="left">
 <td>Password[8-10 characters]</td>
-<td><input type="password" name="password" maxlength="20"></input></td>
+<td><input type="password" name="password" id="password" maxlength="20"></input></td>
 </tr>
 <tr align="left">
 <td>Email ID:</td>
-<td><input type="text" name="email" maxlength="20"></input><span id="lastName_err" class="disp_err"></span></td>
+<td><input type="text" name="email" id="email" maxlength="20"></input><span id="lastName_err" class="disp_err"></span></td>
 
 </tr>
 <tr><td>
